@@ -1,4 +1,4 @@
-package com.example.PIM.model;
+package com.example.s3_videoCloud_backend.model;
 
 import javax.persistence.*;
 

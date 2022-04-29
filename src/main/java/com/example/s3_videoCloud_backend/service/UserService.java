@@ -1,7 +1,7 @@
-package com.example.PIM.service;
+package com.example.s3_videoCloud_backend.service;
 
-import com.example.PIM.model.User;
-import com.example.PIM.repositories.IUserRepository;
+import com.example.s3_videoCloud_backend.model.User;
+import com.example.s3_videoCloud_backend.repositories.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

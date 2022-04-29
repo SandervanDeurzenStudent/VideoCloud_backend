@@ -1,11 +1,11 @@
-package com.example.PIM.service;
+package com.example.s3_videoCloud_backend.service;
 
-import com.example.PIM.repositories.IMusicRepository;
+import com.example.s3_videoCloud_backend.model.Music;
+import com.example.s3_videoCloud_backend.repositories.IMusicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class MusicService {
@@ -17,9 +17,9 @@ public class MusicService {
         this.musicRepository = musicRepository;
     }
 
-//    public List<A> getProducts(){
-//        return musicRepository.findAll();
-//    }
+    public List<Music> getMusics(){
+        return musicRepository.findAll();
+    }
 //
 //    public Optional<Music> getProductById(int id){
 //        return musicRepository.findById(id);

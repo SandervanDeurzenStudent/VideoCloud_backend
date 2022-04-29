@@ -1,23 +1,28 @@
-package com.example.PIM.controller;
+package com.example.s3_videoCloud_backend.controller;
 
+import com.example.s3_videoCloud_backend.model.Music;
+import com.example.s3_videoCloud_backend.service.MusicService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 @RestController
 @RequestMapping("/api/music")
 public class MusicController {
 
-   // private final MusicService musicService;
+    private final MusicService musicService;
 
-//    @Autowired
-//    public MusicController(MusicService musicService) {
-//        this.musicService = musicService;
-//    }
-//
-//    @GetMapping
-//    public List<Audio> getMusic(){
-//        return musicService.getProducts();
-//    }
+    @Autowired
+    public MusicController(MusicService musicService) {
+        this.musicService = musicService;
+    }
+
+    @GetMapping
+    public List<Music> getMusic(){
+        return musicService.getMusics();
+    }
 
 //    @PostMapping
 //    public ResponseEntity<String> createProduct(@RequestBody Music music) {

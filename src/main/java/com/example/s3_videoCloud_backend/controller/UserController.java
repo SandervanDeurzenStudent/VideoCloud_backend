@@ -1,7 +1,7 @@
-package com.example.PIM.controller;
+package com.example.s3_videoCloud_backend.controller;
 
-import com.example.PIM.model.User;
-import com.example.PIM.service.UserService;
+import com.example.s3_videoCloud_backend.model.User;
+import com.example.s3_videoCloud_backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
