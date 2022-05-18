@@ -5,6 +5,6 @@ COPY pom.xml /home/app
 RUN mvn -f /home/app/pom.xml clean package
 
 FROM openjdk:latest
-COPY target/VideoCloud-0.0.1-SNAPSHOT.jar VideoCloud-0.0.1-SNAPSHOT.jar
+COPY target/videocloud.jar videocloud.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "VideoCloud-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "videocloud.jar"]
