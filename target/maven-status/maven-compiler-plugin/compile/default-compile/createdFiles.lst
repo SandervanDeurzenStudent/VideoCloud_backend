@@ -1,0 +1,12 @@
+com\example\s3_videoCloud_backend\controller\UserController.class
+com\example\s3_videoCloud_backend\VideoCloud.class
+com\example\s3_videoCloud_backend\service\UserService.class
+com\example\s3_videoCloud_backend\model\Playlist.class
+com\example\s3_videoCloud_backend\repositories\IUserRepository.class
+com\example\s3_videoCloud_backend\model\Music.class
+com\example\s3_videoCloud_backend\model\User.class
+com\example\s3_videoCloud_backend\ResourceSizeAdvice.class
+com\example\s3_videoCloud_backend\model\Comments.class
+com\example\s3_videoCloud_backend\controller\MusicController.class
+com\example\s3_videoCloud_backend\service\MusicService.class
+com\example\s3_videoCloud_backend\repositories\IMusicRepository.class
