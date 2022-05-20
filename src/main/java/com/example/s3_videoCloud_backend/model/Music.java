@@ -15,8 +15,9 @@ public class Music {
     public Integer am_of_listeners;
     public String file;
     public LocalDateTime created_at;
-    //foreign key!
-    public String creator;
+//    @ManyToOne
+//    @JoinColumn(name = "companyId", referencedColumnName = "id")
+    private String creator;
 
     public Music(Integer id, String name, String descr, Integer am_of_listeners, String file, LocalDateTime created_at, String creator) {
         this.id = id;

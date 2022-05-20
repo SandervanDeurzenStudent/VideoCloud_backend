@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("/api/music")
+@RequestMapping("/api/musics")
 public class MusicController {
 
     private final MusicService musicService;

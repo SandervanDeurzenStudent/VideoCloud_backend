@@ -4,14 +4,14 @@ package com.example.s3_videoCloud_backend.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "User")
+@Table(name = "comments")
 public class Comments {
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
     public String user;
     @Column(unique=true)
-    public String Comment;
+    public String comment;
 
     public Comments() {
     }
@@ -19,7 +19,7 @@ public class Comments {
     public Comments(Integer id, String user, String comment) {
         this.id = id;
         this.user = user;
-        Comment = comment;
+        this.comment = comment;
     }
 
     public Integer getId() {
@@ -39,11 +39,11 @@ public class Comments {
     }
 
     public String getComment() {
-        return Comment;
+        return comment;
     }
 
     public void setComment(String comment) {
-        Comment = comment;
+        this.comment = comment;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class Comments {
         return "Comments{" +
                 "id=" + id +
                 ", user='" + user + '\'' +
-                ", Comment='" + Comment + '\'' +
+                ", Comment='" + comment + '\'' +
                 '}';
     }
 }
