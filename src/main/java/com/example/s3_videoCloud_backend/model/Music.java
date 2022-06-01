@@ -15,11 +15,11 @@ public class Music {
     public Integer am_of_listeners;
     public String file;
     public LocalDateTime created_at;
-//    @ManyToOne
-//    @JoinColumn(name = "companyId", referencedColumnName = "id")
-    private String creator;
+    @ManyToOne
+    @JoinColumn(name = "userId", referencedColumnName = "id")
+    private User creator;
 
-    public Music(Integer id, String name, String descr, Integer am_of_listeners, String file, LocalDateTime created_at, String creator) {
+    public Music(Integer id, String name, String descr, Integer am_of_listeners, String file, LocalDateTime created_at, User creator) {
         this.id = id;
         this.name = name;
         this.descr = descr;
@@ -55,9 +55,9 @@ public class Music {
 
     public void setCreated_at(LocalDateTime created_at) {this.created_at = created_at;}
 
-    public String getCreator() {return creator;}
+    public User getCreator() {return creator;}
 
-    public void setCreator(String creator) {this.creator = creator;}
+    public void setCreator(User creator) {this.creator = creator;}
 
     @Override
     public String toString() {

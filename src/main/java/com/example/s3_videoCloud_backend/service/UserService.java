@@ -20,4 +20,10 @@ public class UserService {
     public List<User> getUsers(){
         return userRepository.findAll();
     }
+
+    public void createUser(User user){
+//        if(user.getName() != "" || user.getEmail()!= "") {
+            userRepository.save(user);
+//        }
+    }
 }

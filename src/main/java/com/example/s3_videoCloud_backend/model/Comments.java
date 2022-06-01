@@ -9,14 +9,17 @@ public class Comments {
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
-    public String user;
     @Column(unique=true)
     public String comment;
+
+    @ManyToOne
+    @JoinColumn(name = "userId", referencedColumnName = "id")
+    private User user;
 
     public Comments() {
     }
 
-    public Comments(Integer id, String user, String comment) {
+    public Comments(Integer id, User user, String comment) {
         this.id = id;
         this.user = user;
         this.comment = comment;
@@ -30,11 +33,11 @@ public class Comments {
         this.id = id;
     }
 
-    public String getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(String user) {
+    public void setUser(User user) {
         this.user = user;
     }
 

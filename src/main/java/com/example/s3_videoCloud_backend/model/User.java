@@ -1,6 +1,8 @@
 package com.example.s3_videoCloud_backend.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "User")
@@ -12,6 +14,8 @@ public class User {
     @Column(unique=true)
     public String email;
 
+    @OneToMany(mappedBy = "creator", orphanRemoval = true)
+    public Set<Music> musics = new HashSet<>();
     public User() {
     }
 
