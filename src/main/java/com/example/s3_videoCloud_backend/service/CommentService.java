@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.xml.stream.events.Comment;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CommentService {
@@ -20,5 +21,17 @@ public class CommentService {
 
     public List<Comments> getComments(){
         return commentRepository.findAll();
+    }
+
+    public  Optional<Comments> getCommentById(int id){
+        return commentRepository.findById(id);
+    }
+
+    public void deleteComment(int commentId){
+        boolean exists = commentRepository.existsById(commentId);
+        if(!exists){
+            throw new IllegalStateException("comment with id: " + commentId + " does not exist");
+        }
+        commentRepository.deleteById(commentId);
     }
 }

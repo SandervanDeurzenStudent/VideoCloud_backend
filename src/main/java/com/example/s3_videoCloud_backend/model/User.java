@@ -16,6 +16,8 @@ public class User {
 
     @OneToMany(mappedBy = "creator", orphanRemoval = true)
     public Set<Music> musics = new HashSet<>();
+
+
     public User() {
     }
 

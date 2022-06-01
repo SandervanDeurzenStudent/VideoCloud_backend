@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -23,4 +24,15 @@ public class CommentController {
     public List<Comments> getComments(){
         return commentService.getComments();
     }
+
+    @GetMapping("/details/{commentId}")
+    public Optional<Comments> getCommentsById(@PathVariable int commentId) {
+        return commentService.getCommentById(commentId);
+    }
+
+    @DeleteMapping("delete/{commentId}")
+    public void deleteComment(@PathVariable("commentId") int commentId) {
+        commentService.deleteComment(commentId);
+    }
+
 }
